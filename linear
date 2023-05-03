@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<conio.h>
+int linear(int[],int,int);
+main()
+{
+	int a[10],n,k,i,pos;
+	printf("Enter the element n:");
+	scanf("%d",&n);
+	printf("Enter the array element:");
+	for(i=0; i<n ;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	printf("Enter the search key:");
+	scanf("%d",&k);
+	pos=linear(a,n,k);
+	if(pos== -1)
+	{
+	printf("available in list ");
+}
+else
+{
+	printf("not available in the list ");
+}
+getch();
+return 0;
+}
+int linear(int a[],int n,int k)
+{
+	int i;
+	for(i=0;i<n;i++)
+	{
+		if(a[i]==k)
+		{
+			return (i);
+		}
+		else
+		{
+			return -1;
+		}
+	}
+}
